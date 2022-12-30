@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Jasmine's Website</title>
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">Jasmine</a>
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#journal">Journal</a></li>
+            <li><a href="contact.html" target="_blank">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <h2 id="text">Welcome!<br><span>On this site I would express my authentic self</span></h2>
+        <img src="img/mountains.png" id="mountains">   
+        <img src="img/birds.png" id="birds">
+    </section>
+    <div class="sec">
+        <h2><a id="about"></a>About me</h2>
+        <p>
+            <ol>
+            <li>1. I'm a social science student, currently in senior year at Kalam Kudus Senior Highschool.</li>
+            <li>2. Besides attending Web Development course during my leisure time, I've been working on essays for uni applications and preparing for IELTS test. </li>
+            <li>3. I'm a Beasiswa Indonesia Maju (BIM) awardee. </li>
+            <li>4. Being a high-achiever, I had partook a plethora of competitions for the past 5 years, especially Geography that had brought me to compete nationally.</li> 
+            <li>5. I was a mentee of Jehian P.S. We met at LOTTE Scholarship Competition.</li>
+            </ol>
+        </p>
+        <br><br><br><br><br>
+        <h2><a id="journal"></a>Journal</h2>
+    <div class="container">
+        <div class="box"><a href="#">My long-held beliefs: Prudence & Stoicism</a></div>
+        <div class="box"><a href="#">A Complete Bafflement: Pursuing CS while Majoring in Social Science</a></div>
+        <div class="box"><a href="#">BIM: The Ups & Downs</a></div>
+        <div class="box"><a href="#">The Silver Lining of Uncertainty</a></div>
+        <div class="box"><a href="#">Toxic Productivity Deteriorates My Wellness & Wellbeing</a></div>
+    </div>
+    <script>
+        let text = document.getElementById('text');
+        let mountains = document.getElementById('mountains');
+        let birds = document.getElementById('birds');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+
+            text.style.top = 50 + value * -0.3 + '%';
+            birds.style.top = value * -2.5 + 'px';
+            birds.style.left = value * 2 + 'px';
+            header.style.top = value * -0.5 + 'px';
+        })
+    </script>
+</body>
+</html>
